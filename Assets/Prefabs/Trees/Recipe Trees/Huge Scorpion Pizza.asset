@@ -1,0 +1,360 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6929003216043993455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db1d917e7634f9c272b67f169428, type: 3}
+  m_Name: FurnaceNode
+  m_EditorClassIdentifier: 
+  _guid: a1f233b18c2a38247a76f29991eec92f
+  _position: {x: -90.99999, y: 321.8501}
+  _data: {fileID: 11400000, guid: 93fb3cafe78824d4b82875d5225751ae, type: 2}
+  _children:
+  - {fileID: -6125752048364156587}
+--- !u!114 &-6646659010855280546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: ceee4ec1f506aa84e83d5b1c0731636e
+  _position: {x: -166, y: 804}
+  _data: {fileID: 11400000, guid: b71610045ccb18e44aefd8f3ecb6089e, type: 2}
+--- !u!114 &-6125752048364156587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468108534a1adb24a9db51609dbf0d4d, type: 3}
+  m_Name: MixingNode
+  m_EditorClassIdentifier: 
+  _guid: a617f88c9d618314597dab3fc5d8165b
+  _position: {x: -91, y: 472}
+  _data: {fileID: 11400000, guid: 28392422cde5b8345b3f309be6015542, type: 2}
+  _children:
+  - {fileID: 4685438350767764846}
+  - {fileID: 2716296079077090661}
+  - {fileID: -5432963909637524936}
+  - {fileID: -2466371983169104115}
+  - {fileID: 741159260928002966}
+--- !u!114 &-5762249775401028861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb56ce612d8d2dd418d18e9c475f48c9, type: 3}
+  m_Name: CuttingNode
+  m_EditorClassIdentifier: 
+  _guid: e28a0b154b699974f9e44b7703437fbf
+  _position: {x: -91.00006, y: 165.30002}
+  _data: {fileID: 11400000, guid: 43f5b8995435c7d46ae14fe76668cdbb, type: 2}
+  _child: {fileID: -6929003216043993455}
+--- !u!114 &-5432963909637524936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468108534a1adb24a9db51609dbf0d4d, type: 3}
+  m_Name: MixingNode
+  m_EditorClassIdentifier: 
+  _guid: fa4065839c5cd404597fc659ccdbb93e
+  _position: {x: 396, y: 645}
+  _data: {fileID: 11400000, guid: 47ced5ebc13f4e8468b6bf0050e0c1d8, type: 2}
+  _children:
+  - {fileID: -4811116765588522133}
+  - {fileID: 8859515482216775096}
+  - {fileID: 2219126759278327589}
+  - {fileID: -4359787951392438574}
+--- !u!114 &-4811116765588522133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: 135ab47bd096bc44893f443b46fb6d7b
+  _position: {x: 170.50504, y: 804}
+  _data: {fileID: 11400000, guid: b71610045ccb18e44aefd8f3ecb6089e, type: 2}
+--- !u!114 &-4359787951392438574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: 65659826114305e49bd3532bc756ba29
+  _position: {x: 621, y: 804}
+  _data: {fileID: 11400000, guid: 6b5ae11b7cea63748b7094838c55c14c, type: 2}
+--- !u!114 &-3634321070425658640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: 104244dc52683434dbca04d028a9e45b
+  _position: {x: -324, y: 962}
+  _data: {fileID: 11400000, guid: 6ebc759e550985949b872947d16908ec, type: 2}
+--- !u!114 &-2466371983169104115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02905451fa7e3fe4face2e4117f5a8cd, type: 3}
+  m_Name: FryingNode
+  m_EditorClassIdentifier: 
+  _guid: 51543b5db4ec89a4f9cf8e20eb4cb9e4
+  _position: {x: -324, y: 645}
+  _data: {fileID: 11400000, guid: a8edf00c5d250704eae2c5ffefba1618, type: 2}
+  _children:
+  - {fileID: 6211625884873808031}
+  - {fileID: -6646659010855280546}
+  - {fileID: 1369897307754026110}
+--- !u!114 &-2121198456936971056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: b1f5e66b53dc15c458c28c571c78a12b
+  _position: {x: 266.30002, y: 165.00003}
+  _data: {fileID: 11400000, guid: a9f6c8b96b5d22a4ba215ed671c52bca, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609f70c3b537f684f95f7a3624654c67, type: 3}
+  m_Name: Huge Scorpion Pizza
+  m_EditorClassIdentifier: 
+  _rootNode: {fileID: 959912229061607447}
+  _nodes:
+  - {fileID: 959912229061607447}
+  - {fileID: 499239327710971051}
+  - {fileID: -2121198456936971056}
+  - {fileID: -6929003216043993455}
+  - {fileID: -5762249775401028861}
+  - {fileID: 4685438350767764846}
+  - {fileID: -6125752048364156587}
+  - {fileID: -3634321070425658640}
+  - {fileID: 6211625884873808031}
+  - {fileID: 2716296079077090661}
+  - {fileID: 6340500800246462033}
+  - {fileID: -5432963909637524936}
+  - {fileID: -4811116765588522133}
+  - {fileID: 8859515482216775096}
+  - {fileID: 2219126759278327589}
+  - {fileID: -4359787951392438574}
+  - {fileID: -2466371983169104115}
+  - {fileID: -6646659010855280546}
+  - {fileID: 1369897307754026110}
+  - {fileID: 741159260928002966}
+--- !u!114 &499239327710971051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: 3dbb4fad52e2c6a44afe9eea8c78fad6
+  _position: {x: 0, y: 804}
+  _data: {fileID: 11400000, guid: cef7ff9593fe3be4db6b97cbba6c2c91, type: 2}
+--- !u!114 &741159260928002966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: f4a550155ee6c1d40a5a3d9947273908
+  _position: {x: 170.99994, y: 645}
+  _data: {fileID: 11400000, guid: 315feada33ff7be438b308a584002127, type: 2}
+--- !u!114 &959912229061607447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2d7fcff5f9de34ca86517b1ac30fdf, type: 3}
+  m_Name: RecipeRoot
+  m_EditorClassIdentifier: 
+  _guid: d9087e7768a6b214b9d2abd116d26543
+  _position: {x: 75, y: 24}
+  _data: {fileID: 11400000, guid: 1b6320eae3b321c4a9209ebdf08ddd02, type: 2}
+  _children:
+  - {fileID: -2121198456936971056}
+  - {fileID: -5762249775401028861}
+--- !u!114 &1369897307754026110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: 92639529ba9524f468c6a594e6fa3cd7
+  _position: {x: -492, y: 804}
+  _data: {fileID: 11400000, guid: 2cda1a289cf32444d8218901aaeb1a4e, type: 2}
+--- !u!114 &2219126759278327589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: dfdfbd0ade46db246b0de1cba273be0d
+  _position: {x: 471.00003, y: 804}
+  _data: {fileID: 11400000, guid: 26b561f6496aa2e4db5d0b747a067d19, type: 2}
+--- !u!114 &2716296079077090661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb56ce612d8d2dd418d18e9c475f48c9, type: 3}
+  m_Name: CuttingNode
+  m_EditorClassIdentifier: 
+  _guid: 1261defd34eb85f40ba3cc7f50c8ace8
+  _position: {x: -661, y: 645}
+  _data: {fileID: 11400000, guid: 7349c7024afb85f4aa6e91c5f9e6261b, type: 2}
+  _child: {fileID: 6340500800246462033}
+--- !u!114 &4685438350767764846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb56ce612d8d2dd418d18e9c475f48c9, type: 3}
+  m_Name: CuttingNode
+  m_EditorClassIdentifier: 
+  _guid: dcb319ae9aedff446bcfe30aefb7ac01
+  _position: {x: 0.00008831025, y: 645.0001}
+  _data: {fileID: 11400000, guid: f89adcccf28701045925b44976a2dae7, type: 2}
+  _child: {fileID: 499239327710971051}
+--- !u!114 &6211625884873808031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb56ce612d8d2dd418d18e9c475f48c9, type: 3}
+  m_Name: CuttingNode
+  m_EditorClassIdentifier: 
+  _guid: 1002a3a3e5cd4944390eca3badeb671c
+  _position: {x: -324, y: 804}
+  _data: {fileID: 11400000, guid: ee814a967f36bcb439de9e3a18135926, type: 2}
+  _child: {fileID: -3634321070425658640}
+--- !u!114 &6340500800246462033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: 1a85c4b8952cb824da187244b1842022
+  _position: {x: -661, y: 805}
+  _data: {fileID: 11400000, guid: 4dfe4cb8c14810a46904f779f0ef64b4, type: 2}
+--- !u!114 &8859515482216775096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dcf7b75ba5e0c459d59bc990c36cae, type: 3}
+  m_Name: IngredientNode
+  m_EditorClassIdentifier: 
+  _guid: 35d7a75cff8d2854aa9a9210d48f4e2e
+  _position: {x: 321, y: 804}
+  _data: {fileID: 11400000, guid: 2cda1a289cf32444d8218901aaeb1a4e, type: 2}

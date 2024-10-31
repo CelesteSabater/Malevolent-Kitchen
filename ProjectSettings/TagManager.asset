@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Food
+  - Door
+  - Item
+  - UI
   layers:
   - Default
   - TransparentFX
