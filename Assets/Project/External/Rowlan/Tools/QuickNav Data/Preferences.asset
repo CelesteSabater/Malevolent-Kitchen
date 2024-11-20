@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6db90f1c0c896d48bdb75d58952248a, type: 3}
+  m_Name: Preferences
+  m_EditorClassIdentifier: 
+  selectedTabIndex: 1
+  historyItemsMax: 20
+  history:
+  - context: 1
+    title: 
+    unityObject: {fileID: 11400000, guid: 3747a46c1fae6c84982116da3ca0637c, type: 2}
+    objectGuid: GlobalObjectId_V1-3-3747a46c1fae6c84982116da3ca0637c-11400000-0
+  favorites:
+  - context: 2
+    title: Escenas
+    unityObject: {fileID: 0}
+    objectGuid: GlobalObjectId_V1-0-00000000000000000000000000000000-0-0
+  - context: 1
+    title: 
+    unityObject: {fileID: 102900000, guid: a0736da461d0d5c4f8a67ab39e0651be, type: 3}
+    objectGuid: GlobalObjectId_V1-1-a0736da461d0d5c4f8a67ab39e0651be-102900000-0
+  - context: 1
+    title: 
+    unityObject: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    objectGuid: GlobalObjectId_V1-1-9fc0d4010bbf28b4594072e72b8655ab-102900000-0

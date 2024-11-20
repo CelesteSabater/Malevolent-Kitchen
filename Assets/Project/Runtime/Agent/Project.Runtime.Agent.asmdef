@@ -1,0 +1,16 @@
+{
+    "name": "Project.Runtime.Agent",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b9cc03895fb839b4ea7e0262de52bedf"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

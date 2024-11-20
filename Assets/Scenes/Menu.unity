@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.112726726, g: 0.28158873, b: 0.7091778, a: 1}
+  m_IndirectSpecularColor: {r: 0.11273751, g: 0.28160727, b: 0.70917696, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1305,7 +1305,6 @@ MonoBehaviour:
   _stationType: 3
   _currentRecipe: {fileID: 0}
   _stationRecipes: []
-  _ingredientsOnArea: []
 --- !u!65 &207702246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1793,7 +1792,6 @@ MonoBehaviour:
   _stationType: 0
   _currentRecipe: {fileID: 0}
   _stationRecipes: []
-  _ingredientsOnArea: []
 --- !u!65 &283751309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4551,7 +4549,6 @@ MonoBehaviour:
   _stationType: 2
   _currentRecipe: {fileID: 0}
   _stationRecipes: []
-  _ingredientsOnArea: []
 --- !u!65 &744956390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9433,7 +9430,6 @@ MonoBehaviour:
   _stationType: 1
   _currentRecipe: {fileID: 0}
   _stationRecipes: []
-  _ingredientsOnArea: []
 --- !u!65 &1611994325
 BoxCollider:
   m_ObjectHideFlags: 0

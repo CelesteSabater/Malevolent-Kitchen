@@ -1,0 +1,17 @@
+{
+    "name": "Project.Runtime.Systems.Audio",
+    "rootNamespace": "Project.Runtime.Systems.Audio",
+    "references": [
+        "GUID:0e1216867c2a1ce47adbdc66b1c5c37f",
+        "GUID:a0cb8232cf6b9f64095848dc4ea2d121"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

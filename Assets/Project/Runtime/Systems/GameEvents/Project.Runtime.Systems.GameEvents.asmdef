@@ -1,0 +1,16 @@
+{
+    "name": "Project.Runtime.Systems.GameEvents",
+    "rootNamespace": "Project.Runtime.Systems.GameEvents",
+    "references": [
+        "GUID:0e1216867c2a1ce47adbdc66b1c5c37f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

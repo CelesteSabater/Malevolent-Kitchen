@@ -1,0 +1,17 @@
+{
+    "name": "Project.Runtime.Systems",
+    "rootNamespace": "Project.Runtime.Systems",
+    "references": [
+        "GUID:b9cc03895fb839b4ea7e0262de52bedf",
+        "GUID:a0cb8232cf6b9f64095848dc4ea2d121"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

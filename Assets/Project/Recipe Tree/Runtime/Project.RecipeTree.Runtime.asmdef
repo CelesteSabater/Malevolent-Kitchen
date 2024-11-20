@@ -1,0 +1,21 @@
+{
+    "name": "Project.RecipeTree.Runtime",
+    "rootNamespace": "Project.RecipeTree.Runtime",
+    "references": [
+        "GUID:6aeafb61d61ffc4498db82bf460d28fc",
+        "GUID:a0cb8232cf6b9f64095848dc4ea2d121",
+        "GUID:f5d7e6b0d5b66b648bc470002e0a7baa",
+        "GUID:1dc32c6068c56f54fa8e09285dea6fad",
+        "GUID:d525ad6bd40672747bde77962f1c401e",
+        "GUID:2f7118c4ed0d6c4468df2287fc3b7eb6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
