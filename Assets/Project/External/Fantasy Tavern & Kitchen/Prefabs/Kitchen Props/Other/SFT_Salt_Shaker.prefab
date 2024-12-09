@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2411255847531024108}
   - component: {fileID: 473571903382714918}
   - component: {fileID: 5702364791699707516}
-  - component: {fileID: 5064664930370073522}
+  - component: {fileID: 3835050376054951490}
   m_Layer: 0
   m_Name: SFT_Salt_Shaker
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.094366014, y: 0.2670831, z: 0.09390676}
   m_Center: {x: 0, y: 0.13354155, z: 0}
---- !u!54 &5064664930370073522
+--- !u!54 &3835050376054951490
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130918762870004723}
   serializedVersion: 4
-  m_Mass: 0.2
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

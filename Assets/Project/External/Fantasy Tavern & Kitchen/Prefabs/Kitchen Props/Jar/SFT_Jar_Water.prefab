@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3909484140495234593}
   - component: {fileID: 1271616349510898411}
   - component: {fileID: 7959147273630110424}
-  - component: {fileID: 8641011783161571339}
+  - component: {fileID: 3277785814469037800}
   m_Layer: 0
   m_Name: SFT_Jar_Water
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.29386282, y: 0.3658546, z: 0.21964693}
   m_Center: {x: 0, y: 0.1829273, z: 0}
---- !u!54 &8641011783161571339
+--- !u!54 &3277785814469037800
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

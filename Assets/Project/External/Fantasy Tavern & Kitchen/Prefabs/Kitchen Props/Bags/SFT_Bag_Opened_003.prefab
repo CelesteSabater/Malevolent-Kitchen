@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1096152453613644319}
   - component: {fileID: 2941597746685058773}
   - component: {fileID: 1244946837676514908}
-  - component: {fileID: 5997426862651384959}
+  - component: {fileID: -8841604449840440049}
   m_Layer: 0
   m_Name: SFT_Bag_Opened_003
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.24560802, y: 0.33681095, z: 0.33902705}
   m_Center: {x: 0, y: 0.16840547, z: 0}
---- !u!54 &5997426862651384959
+--- !u!54 &-8841604449840440049
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3734148061055631104}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

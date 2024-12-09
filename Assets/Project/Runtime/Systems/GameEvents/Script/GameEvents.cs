@@ -54,10 +54,38 @@ public class GameEvents : MonoBehaviour
             onAnnoy(pct);
     }
 
+    public event Action<string> onCut;
+    public void Cut(string stationGuid)
+    {   
+        if(onCut != null)
+            onCut(stationGuid);
+    }
+
+    public event Action<string> onFlip;
+    public void Flip(string stationGuid)
+    {   
+        if(onFlip != null)
+            onFlip(stationGuid);
+    }
+
     public event Action onExtraCuts;
     public void ExtraCuts()
     {   
         if(onExtraCuts != null)
             onExtraCuts();
+    }
+
+    public event Action<string> onStartStation; 
+    public void StartStation(string stationGuid)
+    {
+        if(onBurnFood != null)
+            onStartStation(stationGuid);
+    }
+
+    public event Action<string> onOperateDoor; 
+    public void OperateDoor(string stationGuid)
+    {
+        if(onOperateDoor != null)
+            onOperateDoor(stationGuid);
     }
 }

@@ -22,10 +22,17 @@ namespace Project.BehaviourTree.Runtime
             if(recipe == null)
                 return State.Failure;
 
-            if(!station.GetFoodIsReady())
+            HeatStation heatStation = station as HeatStation;
+            if (heatStation == null)
+            {
+                GameEvents.current.RecipeStep(station.GetStationGuid()); 
+                return State.Success;
+            }
+
+            if(!heatStation.GetFoodIsReady())
                 return State.Failure;
             
-            if (station.GetFoodIsBurnt())
+            if (heatStation.GetFoodIsBurnt())
                 GameEvents.current.BurnFood(station.GetStationGuid());
             else
                 GameEvents.current.RecipeStep(station.GetStationGuid());

@@ -3,7 +3,8 @@
     "rootNamespace": "Project.Runtime.Systems.Audio",
     "references": [
         "GUID:0e1216867c2a1ce47adbdc66b1c5c37f",
-        "GUID:a0cb8232cf6b9f64095848dc4ea2d121"
+        "GUID:a0cb8232cf6b9f64095848dc4ea2d121",
+        "GUID:2f7118c4ed0d6c4468df2287fc3b7eb6"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

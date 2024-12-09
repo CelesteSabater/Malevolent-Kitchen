@@ -11,7 +11,10 @@ namespace Project.BehaviourTree.Runtime
         protected override bool Question()
         {
             
-            CookingStation cookingStation = BlackboardFunctions.GetCookingStation(_blackboard);
+            HeatStation cookingStation = BlackboardFunctions.GetCookingStation(_blackboard) as HeatStation;
+            if (cookingStation == null)
+                return false; 
+                
             return cookingStation.GetFoodIsReady() || cookingStation.GetFoodIsBurnt();
         }
     }

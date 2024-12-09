@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 721407348999087414}
   - component: {fileID: 3307334689573999100}
   - component: {fileID: 8438825800495795009}
-  m_Layer: 0
+  - component: {fileID: 3189895550851534097}
+  m_Layer: 6
   m_Name: SFT_Hook_001 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +27,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3956129770026905641}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7274446297022213828}
+  - {fileID: 4378171504844030165}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &721407348999087414
 MeshFilter:
@@ -93,16 +95,73 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3956129770026905641}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.106665924, y: 0.048387915, z: 0.011359718}
   m_Center: {x: 0.0000000018626451, y: 0.024194002, z: 0}
+--- !u!114 &3189895550851534097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956129770026905641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f1515e39f08e54a86f1703732b8d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _promptText: Cuchillo
+  _promptPrefab: {fileID: 3235494332036224592, guid: 76b53f9ac37830944bd4ce3f4420fd44, type: 3}
+  _promtLocation: {fileID: 4378171504844030165}
+  _isDisplay: 0
+  _knife: {fileID: 8052390989691253886}
+--- !u!1 &5603961293058277916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4378171504844030165}
+  m_Layer: 0
+  m_Name: Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4378171504844030165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5603961293058277916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4444260892346772115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7345589849780860697
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4444260892346772115}
     m_Modifications:
     - target: {fileID: 73396048425195997, guid: d5344261c51bd1842bd574a69b378393, type: 3}
@@ -154,9 +213,17 @@ PrefabInstance:
       value: SFT_Chef_Knive_003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5344261c51bd1842bd574a69b378393, type: 3}
 --- !u!4 &7274446297022213828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 73396048425195997, guid: d5344261c51bd1842bd574a69b378393, type: 3}
+  m_PrefabInstance: {fileID: 7345589849780860697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8052390989691253886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 742832244698989415, guid: d5344261c51bd1842bd574a69b378393, type: 3}
   m_PrefabInstance: {fileID: 7345589849780860697}
   m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,738 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9063155575504133913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7d535958563bd469104f4e582eea70, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  _guid: 51839ca7a6492b442b9539ba91b77513
+  _position: {x: 234.00023, y: 1588}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: Esperar 2
+  _timer1Active: 0
+  _timer2Active: 1
+--- !u!114 &-8257637397081126733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: c8059b4c6d8100a46a5086f74c38f2e6
+  _position: {x: -0.8000488, y: 175.2}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: 6830124994462180988}
+  - {fileID: 3938482605340484761}
+--- !u!114 &-7245505677308111178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518149669a4ec624cbb66fafefaeff51, type: 3}
+  m_Name: FoodReadyOrBurnt
+  m_EditorClassIdentifier: 
+  _guid: ee21a230c2f678d4d91cf6b46603a833
+  _position: {x: 319, y: 792}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFComida quemada o lista?"
+  _child: {fileID: 342323646309558678}
+--- !u!114 &-6988600043254120242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: 25bda29d36ec5364a89b789acb15611a
+  _position: {x: -323.0004, y: 1232}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -4163605319851595927}
+  - {fileID: 5679758015746327425}
+--- !u!114 &-6509979170473038759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93202d0ba6a316647a35ba737a1924b0, type: 3}
+  m_Name: DoNothing
+  m_EditorClassIdentifier: 
+  _guid: 9d08d6c047c962740b499f62e2504e61
+  _position: {x: 527.7393, y: 504.99997}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: JOB DONE
+--- !u!114 &-6390118490329938506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7312bb2ec1755944b58dddf86760f62, type: 3}
+  m_Name: BurnFood
+  m_EditorClassIdentifier: 
+  _guid: b1e60ac751502b2489c183106bbb4f3d
+  _position: {x: -472.99966, y: 1755}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: Quemar comeda
+--- !u!114 &-5937594943160953419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc74213e55c34794da540717a3b8f00a, type: 3}
+  m_Name: Complain
+  m_EditorClassIdentifier: 
+  _guid: 534c37d0bf4789b4b8b00619ea8a5d80
+  _position: {x: -172.99979, y: 1755}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: QUEJARSE
+--- !u!114 &-4842129072294061917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0802f6810b8da4c8ece6ed629cc9f3, type: 3}
+  m_Name: TimerIsUp
+  m_EditorClassIdentifier: 
+  _guid: c874748fe53cbd948a902c9eeb775676
+  _position: {x: -324.0004, y: 1084}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFComida lista?"
+  _child: {fileID: -6988600043254120242}
+  _timer1Active: 1
+  _timer2Active: 0
+--- !u!114 &-4163605319851595927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0802f6810b8da4c8ece6ed629cc9f3, type: 3}
+  m_Name: TimerIsUp
+  m_EditorClassIdentifier: 
+  _guid: 64d5dc9230689de4ea62f70696d99c70
+  _position: {x: -322.9998, y: 1418}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFComida quemada?"
+  _child: {fileID: 5675165877337694591}
+  _timer1Active: 0
+  _timer2Active: 1
+--- !u!114 &-3973167615876453567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: 96aef204bcb6b4f4b8db9a4f18c2d35f
+  _position: {x: 325, y: 651}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -7245505677308111178}
+  - {fileID: 1481192670949970474}
+--- !u!114 &-3773075041390424245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c537e9c5ce4ecda4abbe9beefe4c3f20, type: 3}
+  m_Name: AssignedRecipe
+  m_EditorClassIdentifier: 
+  _guid: 46d0818845a3e2c41bfb05b95cfc64cd
+  _position: {x: 325, y: 505}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFReceta asignada?"
+  _child: {fileID: -3973167615876453567}
+--- !u!114 &-3334603569045652960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93202d0ba6a316647a35ba737a1924b0, type: 3}
+  m_Name: DoNothing
+  m_EditorClassIdentifier: 
+  _guid: afd7a310e5f2bf5478fc6dd83c906774
+  _position: {x: 527.7393, y: 1075.9999}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: JOB DONE
+--- !u!114 &-1278719533239698018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: 07cbf3123199d5d4c8a4aeef56118b3c
+  _position: {x: -324, y: 654}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -794432594094829973}
+  - {fileID: 947930308549166674}
+--- !u!114 &-794432594094829973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c537e9c5ce4ecda4abbe9beefe4c3f20, type: 3}
+  m_Name: AssignedRecipe
+  m_EditorClassIdentifier: 
+  _guid: 3156ce5ad68ff6e45aa5b07a446dcf33
+  _position: {x: -324.00015, y: 800}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFReceta asignada?"
+  _child: {fileID: 7038320037618797621}
+--- !u!114 &-654111010938619731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90ef62e130c5bd48a60a180a3bd2a4b, type: 3}
+  m_Name: SpawnFood
+  m_EditorClassIdentifier: 
+  _guid: 0f6a9299490f28a4a847844a61cd35ec
+  _position: {x: 319, y: 1232}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4805d2b75d6f09c4288344403f233af9, type: 3}
+  m_Name: Furnace Station
+  m_EditorClassIdentifier: 
+  _rootNode: {fileID: 460245996714478098}
+  _nodes:
+  - {fileID: 460245996714478098}
+  - {fileID: -794432594094829973}
+  - {fileID: -3773075041390424245}
+  - {fileID: -6390118490329938506}
+  - {fileID: -5937594943160953419}
+  - {fileID: 947930308549166674}
+  - {fileID: -6509979170473038759}
+  - {fileID: -6988600043254120242}
+  - {fileID: 7038320037618797621}
+  - {fileID: -1278719533239698018}
+  - {fileID: -3973167615876453567}
+  - {fileID: 3938482605340484761}
+  - {fileID: -8257637397081126733}
+  - {fileID: 5475249359301803893}
+  - {fileID: -7245505677308111178}
+  - {fileID: 5675165877337694591}
+  - {fileID: 5679758015746327425}
+  - {fileID: -654111010938619731}
+  - {fileID: 6830124994462180988}
+  - {fileID: 1481192670949970474}
+  - {fileID: -4163605319851595927}
+  - {fileID: -4842129072294061917}
+  - {fileID: -9063155575504133913}
+  - {fileID: 2957676638334002730}
+  - {fileID: 7334470238738808915}
+  - {fileID: 342323646309558678}
+  - {fileID: 1983399151224101840}
+  - {fileID: -3334603569045652960}
+  _treeState: 0
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+--- !u!114 &342323646309558678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: a40dc4f138833d242ac57936141e2cc4
+  _position: {x: 319, y: 939}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: 1983399151224101840}
+  - {fileID: -3334603569045652960}
+--- !u!114 &460245996714478098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5413526782d064d9a5493bb34104ef, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  _guid: 2879c9f3e933c24439ed7d2a865d48ed
+  _position: {x: 0, y: 1.5999908}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _repeater: 1
+  _child: {fileID: -8257637397081126733}
+--- !u!114 &947930308549166674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc74213e55c34794da540717a3b8f00a, type: 3}
+  m_Name: Complain
+  m_EditorClassIdentifier: 
+  _guid: afba4f126d252324d876821b146770a6
+  _position: {x: -38, y: 809}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: QUEJARSE
+--- !u!114 &1481192670949970474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e23cfe0e9d1b14eb87147dd6937595, type: 3}
+  m_Name: TimePenalty
+  m_EditorClassIdentifier: 
+  _guid: 226b4c73b4c11ff4aa2f559945928a9e
+  _position: {x: 527.7393, y: 791.99994}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: Penalizar
+  _timeMultiplier: 1
+--- !u!114 &1983399151224101840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c218b9c511d8e4b48b5b886dffec794f, type: 3}
+  m_Name: StationDoorIsOpen
+  m_EditorClassIdentifier: 
+  _guid: db221e2c0d3b3f549a5a11ac5232f04e
+  _position: {x: 319, y: 1084}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFPuerta abierta?"
+  _child: {fileID: -654111010938619731}
+  wantTheDoorToBeOpen: 1
+--- !u!114 &2824440734049991460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93202d0ba6a316647a35ba737a1924b0, type: 3}
+  m_Name: DoNothing
+  m_EditorClassIdentifier: 
+  _guid: d677b28bd4a0ee84eb7f868d80933d46
+  _position: {x: 640.8, y: 141.6}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+--- !u!114 &2957676638334002730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7d535958563bd469104f4e582eea70, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  _guid: ffe10d05dedd255429fb98a0f50afe35
+  _position: {x: -38.19094, y: 1085}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: Esperar 1
+  _timer1Active: 1
+  _timer2Active: 0
+--- !u!114 &3938482605340484761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: bdc32678f703e6a4fa26dabee8d7ce48
+  _position: {x: 325, y: 355}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -3773075041390424245}
+  - {fileID: -6509979170473038759}
+--- !u!114 &5475249359301803893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc9902ae33eb543974bba62c94d4d2, type: 3}
+  m_Name: FoodIsReady
+  m_EditorClassIdentifier: 
+  _guid: be1a61a890585ac48839ee99f72c0efc
+  _position: {x: -65.99985, y: 1588}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: Comida lista :)
+--- !u!114 &5675165877337694591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84964d9d31d439a46893e998fc0f8858, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  _guid: 8448aba69a332604da75249316681d5e
+  _position: {x: -322.9998, y: 1588}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -6390118490329938506}
+  - {fileID: -5937594943160953419}
+--- !u!114 &5679758015746327425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84964d9d31d439a46893e998fc0f8858, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  _guid: be0ff557bc401f544864f990bed447ab
+  _position: {x: 85.0002, y: 1418}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: 5475249359301803893}
+  - {fileID: -9063155575504133913}
+--- !u!114 &6830124994462180988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23de4dd1cedc54d4692af1c8dde1c0fb, type: 3}
+  m_Name: StationIsOn
+  m_EditorClassIdentifier: 
+  _guid: 9bacb12a5c1f7434981933d000b55097
+  _position: {x: -327.2, y: 355.32007}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFEstaci\xF3n encendida?"
+  _child: {fileID: 7334470238738808915}
+--- !u!114 &7038320037618797621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: 5790a73bdd767194a93eec8eae2f256a
+  _position: {x: -324.00015, y: 940}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -4842129072294061917}
+  - {fileID: 2957676638334002730}
+--- !u!114 &7334470238738808915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c218b9c511d8e4b48b5b886dffec794f, type: 3}
+  m_Name: StationDoorIsOpen
+  m_EditorClassIdentifier: 
+  _guid: 38cbe52fa94b30c42bc71f5bb27fe560
+  _position: {x: -324, y: 507}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFPuerta cerrada?"
+  _child: {fileID: -1278719533239698018}
+  wantTheDoorToBeOpen: 0

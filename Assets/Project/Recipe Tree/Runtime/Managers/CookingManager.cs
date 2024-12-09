@@ -35,7 +35,8 @@ public class CookingManager : Singleton<CookingManager>
         GameEvents.current.onCompleteFood += OnCompleteFood;
     }
 
-    private void OnDestroy() {
+    private void OnDestroy() 
+    {
         GameEvents.current.onStrike -= OnStrike;
         GameEvents.current.onCompleteFood -= OnCompleteFood;
     }
@@ -85,28 +86,28 @@ public class CookingManager : Singleton<CookingManager>
         }
     }
 
-    [HideInInspector] public List<RecipeNode> GetRecipes(StationType station)
+    [HideInInspector] public List<RecipeNode> GetRecipes(CookingStation station)
     {
         List<RecipeNode> nodesInStation = new List<RecipeNode>();
 
         foreach (RecipeTree recipe in _menu)
         {
-            List<RecipeNode> list = null;
+            List<RecipeNode> list = new List<RecipeNode>();
             switch (station)
             {
-                case StationType.CuttingStation:
+                case CuttingStation:
                     list = RecipeTree.GetNodes(recipe.GetRootNode(), typeof(CuttingNode));
                     break;
-                case StationType.FryingStation:
+                case FryingStation:
                     list = RecipeTree.GetNodes(recipe.GetRootNode(), typeof(FryingNode));
                     break;
-                case StationType.FurnaceStation:
+                case FurnaceStation:
                     list = RecipeTree.GetNodes(recipe.GetRootNode(), typeof(FurnaceNode));
                     break;
-                case StationType.PotStation:
+                case PotStation:
                     list = RecipeTree.GetNodes(recipe.GetRootNode(), typeof(PotNode));
                     break;
-                case StationType.MixingStation:
+                case MixingStation:
                     List<RecipeNode> mixingNode = RecipeTree.GetNodes(recipe.GetRootNode(), typeof(MixingNode));
                     List<RecipeNode> rootNode = RecipeTree.GetNodes(recipe.GetRootNode(), typeof(RecipeRoot));
                     list = new List<RecipeNode>(mixingNode.Count + rootNode.Count);

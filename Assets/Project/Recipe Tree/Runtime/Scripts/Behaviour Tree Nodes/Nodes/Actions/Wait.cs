@@ -18,7 +18,7 @@ namespace Project.BehaviourTree.Runtime
         protected override State OnUpdate()
         {
             
-            CookingStation cookingStation = BlackboardFunctions.GetCookingStation(_blackboard);
+            HeatStation cookingStation = BlackboardFunctions.GetCookingStation(_blackboard) as HeatStation;
 
             if (_timer1Active)
             {

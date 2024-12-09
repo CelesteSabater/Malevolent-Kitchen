@@ -10,9 +10,9 @@ namespace Project.RecipeTree.Runtime
     public class FryingNode : RecipeNode
     {
         [HideInInspector] public List<RecipeNode> _children = new List<RecipeNode>();
-        [SerializeField] private int _numberOfFlips = 2;
-        [SerializeField] private float _readyTime = 30;
-        [SerializeField] private float _burntTime = 15;
+        [SerializeField] private int _numberOfFlips = 3;
+        [SerializeField] private float _readyTime = 10;
+        [SerializeField] private float _burntTime = 5;
 
         public int GetNumberOfFlips() => _numberOfFlips;
         public float GetReadyTime() => _readyTime;

@@ -9,7 +9,7 @@ namespace Project.RecipeTree.Runtime
 {
     public class MixingNode : RecipeNode
     {
-        [HideInInspector] public List<RecipeNode> _children = new List<RecipeNode>();
+        public List<RecipeNode> _children = new List<RecipeNode>();
 
         public override RecipeNode Clone()
         {

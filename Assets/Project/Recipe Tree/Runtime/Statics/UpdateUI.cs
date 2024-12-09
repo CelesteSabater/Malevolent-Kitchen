@@ -18,43 +18,45 @@ namespace Project.RecipeTree.Runtime
             if (station == null)
                 return;
 
-            TimerController timer = station.GetTimerController();
+            HeatStation heatStation = station as HeatStation;
+            if (heatStation == null)
+                return;     
+
+            TimerController timer = heatStation.GetTimerController();
             
             if (timer == null) 
                 return;
     
             timer.gameObject.SetActive(false);
 
-            if (station.GetFoodIsBurnt())
+            if (heatStation.GetFoodIsBurnt())
                 return;
 
             if (station.GetCurrentRecipe() != null)
                 timer.gameObject.SetActive(true);
             
-            timer.SetBurnt(station.GetFoodIsReady());
+            timer.SetBurnt(heatStation.GetFoodIsReady());
         }
 
         private static void UpdateExclamationIcon(CookingStation station)
         {
             if (station == null)
                 return;
-            GameObject exclamationIcon = station.GetExclamationIcon();
-            
+
+            HeatStation heatStation = station as HeatStation;
+            if (heatStation == null)
+                return; 
+
+            GameObject exclamationIcon = heatStation.GetExclamationIcon();
             if (exclamationIcon == null)
                 return;
 
-            
-
-            if (station.GetStationIsOn() && station.GetCurrentRecipe() == null)
+            if (heatStation.GetStationIsOn() && station.GetCurrentRecipe() == null)
                 exclamationIcon.gameObject.SetActive(true);
-            else if (station.GetFoodIsBurnt())
+            else if (heatStation.GetFoodIsBurnt())
                 exclamationIcon.gameObject.SetActive(true);
             else
                 exclamationIcon.gameObject.SetActive(false);
-
-            Animator anim = exclamationIcon.GetComponentInChildren<Animator>();
-            if (anim == null)
-                return;
         }
     }
 }

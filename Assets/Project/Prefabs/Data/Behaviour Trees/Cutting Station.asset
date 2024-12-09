@@ -1,0 +1,314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7391475953070624725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc20f996d5d417340b59e311309fe252, type: 3}
+  m_Name: EnoughCuts
+  m_EditorClassIdentifier: 
+  _guid: 8bf22a4b77e649a4b839926968cd5ada
+  _position: {x: -300, y: 585}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFCortes suficientes?"
+  _child: {fileID: 342323646309558678}
+--- !u!114 &-6509979170473038759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93202d0ba6a316647a35ba737a1924b0, type: 3}
+  m_Name: DoNothing
+  m_EditorClassIdentifier: 
+  _guid: 9d08d6c047c962740b499f62e2504e61
+  _position: {x: 203.00006, y: 297.51852}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: JOB DONE
+--- !u!114 &-5355850067902609551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c4fd620323c7e48b1f85c201625e00, type: 3}
+  m_Name: HoldingKnife
+  m_EditorClassIdentifier: 
+  _guid: 70ec553951cc99b43b41c5cd23999a42
+  _position: {x: -450, y: 903}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFManteniendo un cuchillo?"
+  _child: {fileID: -654111010938619731}
+  test: 1
+--- !u!114 &-3973167615876453567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: 96aef204bcb6b4f4b8db9a4f18c2d35f
+  _position: {x: -150.00029, y: 444}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -7391475953070624725}
+  - {fileID: 8816218086387937902}
+--- !u!114 &-3773075041390424245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c537e9c5ce4ecda4abbe9beefe4c3f20, type: 3}
+  m_Name: AssignedRecipe
+  m_EditorClassIdentifier: 
+  _guid: 46d0818845a3e2c41bfb05b95cfc64cd
+  _position: {x: -150.00029, y: 298.00003}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: "\xBFReceta asignada?"
+  _child: {fileID: -3973167615876453567}
+--- !u!114 &-654111010938619731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90ef62e130c5bd48a60a180a3bd2a4b, type: 3}
+  m_Name: SpawnFood
+  m_EditorClassIdentifier: 
+  _guid: 0f6a9299490f28a4a847844a61cd35ec
+  _position: {x: -450, y: 1081.12}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: Generar comida
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4805d2b75d6f09c4288344403f233af9, type: 3}
+  m_Name: Cutting Station
+  m_EditorClassIdentifier: 
+  _rootNode: {fileID: 460245996714478098}
+  _nodes:
+  - {fileID: 460245996714478098}
+  - {fileID: -3773075041390424245}
+  - {fileID: -6509979170473038759}
+  - {fileID: -3973167615876453567}
+  - {fileID: 3938482605340484761}
+  - {fileID: -654111010938619731}
+  - {fileID: 342323646309558678}
+  - {fileID: -7391475953070624725}
+  - {fileID: -5355850067902609551}
+  - {fileID: 2260668419271942152}
+  - {fileID: 8816218086387937902}
+  _treeState: 0
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+--- !u!114 &342323646309558678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: a40dc4f138833d242ac57936141e2cc4
+  _position: {x: -300, y: 751}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -5355850067902609551}
+  - {fileID: 2260668419271942152}
+--- !u!114 &460245996714478098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5413526782d064d9a5493bb34104ef, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  _guid: 2879c9f3e933c24439ed7d2a865d48ed
+  _position: {x: 0, y: 1.5999908}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _repeater: 1
+  _child: {fileID: 3938482605340484761}
+--- !u!114 &2260668419271942152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93202d0ba6a316647a35ba737a1924b0, type: 3}
+  m_Name: DoNothing
+  m_EditorClassIdentifier: 
+  _guid: 3f8cbfc5ecaabcd488f9094fe0c084dd
+  _position: {x: -149.99998, y: 903.00006}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: MMMMM
+--- !u!114 &2824440734049991460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93202d0ba6a316647a35ba737a1924b0, type: 3}
+  m_Name: DoNothing
+  m_EditorClassIdentifier: 
+  _guid: d677b28bd4a0ee84eb7f868d80933d46
+  _position: {x: 640.8, y: 141.6}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+--- !u!114 &3938482605340484761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34884b874f34d434391b9e76cce9773f, type: 3}
+  m_Name: Fallback
+  m_EditorClassIdentifier: 
+  _guid: bdc32678f703e6a4fa26dabee8d7ce48
+  _position: {x: -0.000030517578, y: 147.5185}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: 
+  _children:
+  - {fileID: -3773075041390424245}
+  - {fileID: -6509979170473038759}
+--- !u!114 &8816218086387937902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a06584bae0d6f8478e87ada9cd5ff96, type: 3}
+  m_Name: SpawnCuttable
+  m_EditorClassIdentifier: 
+  _guid: 6c81717210e784a4084b9d1d563a6215
+  _position: {x: 0, y: 585}
+  _blackboard:
+    _startedTimer: 0
+    _timer1: 0
+    _timer2: 0
+    _timerDuration1: 0
+    _timerDuration2: 0
+    _gameObject: {fileID: 0}
+  description: Generar cortable

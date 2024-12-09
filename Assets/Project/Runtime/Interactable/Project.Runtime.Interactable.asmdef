@@ -1,0 +1,23 @@
+{
+    "name": "Project.Runtime.Interactable",
+    "rootNamespace": "Project.Runtime.Interactable",
+    "references": [
+        "GUID:b9cc03895fb839b4ea7e0262de52bedf",
+        "GUID:ab2ed6877d50ba242a13da3c92e07f69",
+        "GUID:2f7118c4ed0d6c4468df2287fc3b7eb6",
+        "GUID:1dc32c6068c56f54fa8e09285dea6fad",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:a4760263d361df74da58957295cdd534",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:a0cb8232cf6b9f64095848dc4ea2d121"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

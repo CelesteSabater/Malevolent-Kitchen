@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 [Serializable]
 public class Sound
@@ -18,7 +19,7 @@ public class AudioSystem : Singleton<AudioSystem>
     [Range(0, 1)]
     [SerializeField] private float _sfxVolume = 1;
     [Range(0, 1)]
-    [SerializeField] private float _voiceVolume = 1;
+    [SerializeField] private float _sentenceVolume = 1;
     [SerializeField] private String _startingMusic;
     [SerializeField] private Sound[] _musicSounds, _sfxSounds, _sentences;
     [SerializeField] private AudioSource _musicSource, _sfxSource;
@@ -69,7 +70,7 @@ public class AudioSystem : Singleton<AudioSystem>
         if (sentence == null)
             return;
 
-        source.volume = sentence._volume * _sfxVolume;
+        source.volume = sentence._volume * _sentenceVolume;
         source.PlayOneShot(sentence._clip);
     }
 
@@ -113,5 +114,37 @@ public class AudioSystem : Singleton<AudioSystem>
         aSource.volume = volume;    
         aSource.Play();
         Destroy(tempGO, clip.length);
+    }
+
+    public void PlayMusicWithDelay(float delay, string name)
+    {
+        StartCoroutine(MusicWithDelay(delay, name));
+    }
+
+    public void PlaySFXWithDelay(float delay, string name)
+    {
+        StartCoroutine(SFXWithDelay(delay, name));
+    }
+        
+    public void PlaySFXWithDelay(float delay, string name, Vector3 location)
+    {
+        StartCoroutine(SFXWithDelay(delay, name, location));
+    }
+
+    IEnumerator MusicWithDelay(float delay, string name)
+    {
+        yield return new WaitForSeconds(delay);
+        PlayMusic(name);
+    }
+    IEnumerator SFXWithDelay(float delay, string name)
+    {
+        yield return new WaitForSeconds(delay);
+        PlaySFX(name);
+    }
+
+    IEnumerator SFXWithDelay(float delay, string name, Vector3 location)
+    {
+        yield return new WaitForSeconds(delay);
+        PlaySFX(name, location);
     }
 }

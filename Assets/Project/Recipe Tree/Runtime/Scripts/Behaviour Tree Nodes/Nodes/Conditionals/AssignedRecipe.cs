@@ -5,7 +5,6 @@ namespace Project.BehaviourTree.Runtime
 {
     public class AssignedRecipe : ConditionalNode
     {
-        
 
         protected override void OnStart() { }
 

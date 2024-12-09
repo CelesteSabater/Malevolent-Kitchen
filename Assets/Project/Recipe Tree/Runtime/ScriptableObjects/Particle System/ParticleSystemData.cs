@@ -14,7 +14,11 @@ namespace Project.RecipeTree.Runtime
             if (station == null)
                 return;
 
-            ParticleSystem particleSystem = station.GetParticleSystem();
+            HeatStation heatStation = station as HeatStation;
+            if (heatStation == null)
+                return;     
+
+            ParticleSystem particleSystem = heatStation.GetParticleSystem();
 
             if (particleSystem == null)
                 return;

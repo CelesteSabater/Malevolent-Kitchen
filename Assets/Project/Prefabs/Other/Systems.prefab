@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 355730356526993355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.62, y: 1.511, z: -5.719}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8051426657403102296}
   m_Layer: 0
   m_Name: Audio System
-  m_TagString: GameController
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ Transform:
   m_GameObject: {fileID: 1242336449921709560}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.70388, y: 6.903221, z: -144.24515}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -174,48 +174,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c154f509f5fe58143ad32cc48c1e5fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicVolume: 0
-  _sfxVolume: 0.048
-  _voiceVolume: 1
-  _startingMusic: TimeFlowsEverOnward
+  _musicVolume: 1
+  _sfxVolume: 1
+  _sentenceVolume: 1
+  _startingMusic: Anxiety&Joy
   _musicSounds:
   - _name: HalloweenChiptune
     _clip: {fileID: 8300000, guid: 17deaa0f1da18c844840bd6f5f1131b7, type: 3}
     _loop: 1
-    _volume: 100
+    _volume: 0.2
   - _name: TimeFlowsEverOnward
     _clip: {fileID: 8300000, guid: 1b49df8c3ae550d40a600c7c260fd295, type: 3}
     _loop: 1
-    _volume: 100
+    _volume: 0.2
   - _name: Anxiety&Joy
     _clip: {fileID: 8300000, guid: 38a752d3426385b4b979ffeaac7b6ada, type: 3}
     _loop: 1
-    _volume: 100
+    _volume: 0.2
   - _name: WeDidIt
     _clip: {fileID: 8300000, guid: d3916fb2dbc3a0d4d9d383cede8e1614, type: 3}
     _loop: 0
-    _volume: 100
+    _volume: 0.2
   _sfxSounds:
   - _name: ArcaneBoom
     _clip: {fileID: 8300000, guid: e9eb836d6fe79a0438e37f2aec6c00ee, type: 3}
     _loop: 0
-    _volume: 0.12
+    _volume: 0.01
   - _name: Explosion
     _clip: {fileID: 8300000, guid: 2d719cb47be7eff4da23970b852c4b3b, type: 3}
     _loop: 0
-    _volume: 0.275
+    _volume: 0.2
   - _name: Ding
     _clip: {fileID: 8300000, guid: 97c6cb5976cb9b24cbec4d633d494114, type: 3}
     _loop: 0
-    _volume: 0.275
+    _volume: 0.3
   - _name: Burnt
     _clip: {fileID: 8300000, guid: a3923b803848ce94ca4df921d448d638, type: 3}
     _loop: 0
-    _volume: 0.55
+    _volume: 0.5
   - _name: PageTurn
     _clip: {fileID: 8300000, guid: c022671bf963aed4c949de3af3172de0, type: 3}
     _loop: 0
     _volume: 0.275
+  - _name: Click
+    _clip: {fileID: 8300000, guid: 18438819b3da3fd48ba435bec7d7219a, type: 3}
+    _loop: 0
+    _volume: 0.5
+  - _name: OpenDoor
+    _clip: {fileID: 8300000, guid: 9ce9d06c3861d9b48a7a4d2559d2cd33, type: 3}
+    _loop: 0
+    _volume: 0.5
+  - _name: CloseDoor
+    _clip: {fileID: 8300000, guid: 884ad583480a424468fe17dbe7b3a598, type: 3}
+    _loop: 0
+    _volume: 0.234
+  - _name: Cut
+    _clip: {fileID: 8300000, guid: 2d719cb47be7eff4da23970b852c4b3b, type: 3}
+    _loop: 0
+    _volume: 0.234
   _sentences: []
   _musicSource: {fileID: 1458725382065195354}
   _sfxSource: {fileID: 7961552362422135988}
@@ -251,6 +267,7 @@ Transform:
   m_Children:
   - {fileID: 1427034203327756046}
   - {fileID: 8253440753741849805}
+  - {fileID: 8023574595391111770}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4855650552904869429
@@ -307,6 +324,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 102184332219f5043a04c170710147df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7182012515995000435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8023574595391111770}
+  - component: {fileID: 5558980604912783801}
+  m_Layer: 0
+  m_Name: Animation System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8023574595391111770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7182012515995000435}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3392670137999388298}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5558980604912783801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7182012515995000435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d424df266f16904db099e0c6c4f3bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7243322029803408996

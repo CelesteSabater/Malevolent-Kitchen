@@ -15,10 +15,10 @@ MonoBehaviour:
   selectedTabIndex: 1
   historyItemsMax: 20
   history:
-  - context: 1
+  - context: 0
     title: 
-    unityObject: {fileID: 11400000, guid: 3747a46c1fae6c84982116da3ca0637c, type: 2}
-    objectGuid: GlobalObjectId_V1-3-3747a46c1fae6c84982116da3ca0637c-11400000-0
+    unityObject: {fileID: 0}
+    objectGuid: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-3546084612906045287-539259319
   favorites:
   - context: 2
     title: Escenas

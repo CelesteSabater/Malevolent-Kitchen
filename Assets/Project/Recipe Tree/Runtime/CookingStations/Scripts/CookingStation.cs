@@ -1,92 +1,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using System;
 using Project.RecipeTree.Runtime;
 using UnityEditor;
-
-public enum StationType
-{
-    CuttingStation,
-    FryingStation,
-    FurnaceStation,
-    PotStation,
-    MixingStation
-}
 
 public class CookingStation : MonoBehaviour
 {
     [Header("Game Data")]
     [SerializeField] private GameObject _foodSpawnPos;
-    [SerializeField] private StationType _stationType;
     [SerializeField] private RecipeNode _currentRecipe;
     [SerializeField] private List<RecipeNode> _stationRecipes = new List<RecipeNode>();  
     [SerializeField] private Dictionary<string, GameObject> _ingredientsOnArea = new Dictionary<string, GameObject>();
 
-    [Header("Visual Effects")]
-    [SerializeField] private GameObject _exclamationIcon;
-    [SerializeField] private GameObject _tool;
-    [SerializeField] private TimerController _timer;
-    [SerializeField] private ParticleSystem _particleSystem;
-
-    [Header("Particle Settings")]
-    [SerializeField] private ParticleSystemData _particleSystemData;
-
-    private bool _stationIsOn = false;
-    private bool _foodIsBurnt = false;
-    private bool _foodIsReady = false;
     private string _stationGuid;
 
-    public bool GetStationIsOn() => _stationIsOn;
-    public void SwitchStationIsOn() =>_stationIsOn = !_stationIsOn;
+    #region Getters and Setters
     public RecipeNode GetCurrentRecipe() => _currentRecipe;
-    public bool GetFoodIsBurnt() => _foodIsBurnt;
-    public void SetFoodIsBurnt(bool value)
-    {
-        if (value == _foodIsBurnt)
-            return;
-
-        _foodIsBurnt = value;
-
-        if (_foodIsBurnt)
-            AudioSystem.Instance.PlaySFX("Burnt",gameObject.transform.position);
-    }
-    public bool GetFoodIsReady() => _foodIsReady;
-    public void SetFoodIsReady(bool value)
-    {
-        if (value == _foodIsReady)
-            return;
-
-        _foodIsReady = value;
-
-        if (_foodIsReady)
-            AudioSystem.Instance.PlaySFX("Ding",gameObject.transform.position);
-    }
-    public GameObject GetTool() => _tool;
-    public GameObject GetExclamationIcon() => _exclamationIcon;
-    public TimerController GetTimerController() => _timer;
-    public ParticleSystem GetParticleSystem() => _particleSystem;
-    public ParticleSystemData GetParticleSystemData() => _particleSystemData;
     public string GetStationGuid() => _stationGuid;
+    public Vector3 GetFoodSpawnPos() => _foodSpawnPos.transform.position;
+    #endregion
 
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            SwitchStationIsOn();    
-    }
-
-    private void Start()
+    protected virtual void Start()
     {
         _stationGuid = GUID.Generate().ToString();
-        _stationRecipes = CookingManager.Instance.GetRecipes(_stationType);
+        _stationRecipes = CookingManager.Instance.GetRecipes(this);
         RestartData();
-        GameEvents.current.onBurnFood += OnBurnFood;
         GameEvents.current.onRecipeStep += OnRecipeStep;
     }
 
-    private void OnDestroy() {
-        GameEvents.current.onBurnFood -= OnBurnFood;
+    protected virtual void OnDestroy() 
+    {
         GameEvents.current.onRecipeStep -= OnRecipeStep;
     }
 
@@ -114,7 +57,7 @@ public class CookingStation : MonoBehaviour
         return ingredients;
     }
 
-    private void CheckIngredients()
+    protected virtual void CheckIngredients()
     {
         _currentRecipe = null;
 
@@ -158,49 +101,33 @@ public class CookingStation : MonoBehaviour
         _currentRecipe = null;
     }
 
-    private void OnRecipeStep(string stationGuid)
+    protected virtual void OnRecipeStep(string stationGuid)
     {
         if (stationGuid != _stationGuid)
             return;
         
-        if (_currentRecipe == null || !_foodIsReady)
+        if (_currentRecipe == null)
             return;     
 
-        FoodSpawnManager.Instance.InstanceFood(_currentRecipe.GetFoodData(), _foodSpawnPos.transform.position, _foodIsBurnt);
+        RecipeRoot root = _currentRecipe as RecipeRoot;
+        if (root != null)
+            AudioSystem.Instance.PlayMusicWithDelay(FoodSpawnManager.Instance.GetSummonDelay(),"WeDidIt");  
+
+        bool FOOD_IS_NOT_BURNT = false;
+        FoodSpawnManager.Instance.InstanceFood(_currentRecipe.GetFoodData(), GetFoodSpawnPos(), FOOD_IS_NOT_BURNT);
         RestartData();   
     }
 
-    private void OnBurnFood(string stationGuid)
-    {
-        if (stationGuid != _stationGuid)
-            return;
-        
-        if (_currentRecipe == null || !_foodIsBurnt)
-            return;  
-        
-        FoodSpawnManager.Instance.InstanceFood(_currentRecipe.GetFoodData(), _foodSpawnPos.transform.position, _foodIsBurnt);
-        RestartData();
-    }
-
-    public void UpdateTimer(float percent) 
-    {
-        UpdateVisuals.UpdateCookingStation(this);
-        _timer.SetFill(percent);
-    }
-
-    private void RestartData()
+    protected virtual void RestartData()
     {
         _currentRecipe = null;
-        _stationIsOn = false;
-        _foodIsBurnt = false;
-        _foodIsReady = false;
         UpdateVisuals.UpdateCookingStation(this);
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (_currentRecipe != null)
-        return;
+            return;
 
         if (!other.GetComponent<Food>())
             return;
@@ -212,7 +139,7 @@ public class CookingStation : MonoBehaviour
         CheckIngredients();
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (_currentRecipe != null)
         return;

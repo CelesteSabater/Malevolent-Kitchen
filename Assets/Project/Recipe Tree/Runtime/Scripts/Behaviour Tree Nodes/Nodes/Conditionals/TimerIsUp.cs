@@ -14,7 +14,6 @@ namespace Project.BehaviourTree.Runtime
         
         protected override bool Question()
         {
-            
             bool answer = false;
 
             if ((_timer1Active && _blackboard._timer1 <= 0) || (_timer2Active && _blackboard._timer2 <= 0))

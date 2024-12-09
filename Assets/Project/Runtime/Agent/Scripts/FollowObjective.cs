@@ -5,12 +5,12 @@ using UnityEngine.AI;
 
 public class FollowObjective : MonoBehaviour
 {
-    private NavMeshAgent agent;
-    [SerializeField] private Transform objective;
+    private NavMeshAgent _agent;
+    [SerializeField] private Transform _objective;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -18,18 +18,18 @@ public class FollowObjective : MonoBehaviour
         Go();
     }
 
-    public void Go()
+    private void Go()
     {
-        Go(objective.position);
+        Go(_objective.position);
     }
 
-    public void Go(Vector3 destination)
+    private void Go(Vector3 destination)
     {
-        agent.SetDestination(objective.position);
+        _agent.SetDestination(_objective.position);
     }
 
-    public void Teleport(Vector3 destination)
+    public void ChangeObjective(Transform newObjective)
     {
-        this.transform.position = destination;
+        _objective = newObjective;
     }
 }

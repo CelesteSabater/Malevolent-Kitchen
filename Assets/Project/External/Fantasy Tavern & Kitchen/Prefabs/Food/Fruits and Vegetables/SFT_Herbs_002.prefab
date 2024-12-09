@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7144627091024876514}
   - component: {fileID: 4954565651587622696}
   - component: {fileID: 7435235709460696668}
-  - component: {fileID: 9154811077255133022}
+  - component: {fileID: 5310891194604683618}
   m_Layer: 0
   m_Name: SFT_Herbs_002
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.35166624, y: 0.44090578, z: 0.33242422}
   m_Center: {x: 0, y: 0.22045289, z: 0}
---- !u!54 &9154811077255133022
+--- !u!54 &5310891194604683618
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6900318671060911869}
   serializedVersion: 4
-  m_Mass: 0.03
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

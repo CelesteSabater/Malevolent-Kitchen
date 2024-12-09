@@ -11,6 +11,7 @@ namespace Project.RecipeTree.Runtime
                 
             UpdateTools(station);
             UpdateParticleSystem(station);
+            UpdateLights(station);
             UpdateUI.UpdateStationUI(station);
         }
 
@@ -18,30 +19,56 @@ namespace Project.RecipeTree.Runtime
         {
             if (station == null)
                 return;
+                
+            HeatStation heatStation = station as HeatStation;
+            if (heatStation == null)
+                return; 
 
-            station.GetTool().SetActive(false);
-            if (station.GetCurrentRecipe() != null)
-                station.GetTool().SetActive(true);
+            GameObject tool = heatStation.GetTool();
+            if (tool == null)
+                return;
+
+            tool.SetActive(station.GetCurrentRecipe() != null);
         }
+
+        private static void UpdateLights(CookingStation station)
+        {
+            if (station == null)
+                return;
+
+            HeatStation heat = station as HeatStation;
+            if (heat == null)
+                return;	
+
+            Light l = heat.GetLight();
+            if (l == null)
+                return;
+
+            l.gameObject.SetActive(heat.GetStationIsOn());
+        }                    
 
         private static void UpdateParticleSystem(CookingStation station)
         {
             if (station == null)
                 return;
 
-            ParticleSystem particleSystem = station.GetParticleSystem();
-            ParticleSystemData particleSystemData = station.GetParticleSystemData();
+            HeatStation heatStation = station as HeatStation;
+            if (heatStation == null)
+                return; 
+
+            ParticleSystem particleSystem = heatStation.GetParticleSystem();
+            ParticleSystemData particleSystemData = heatStation.GetParticleSystemData();
 
             if (particleSystem == null || particleSystemData == null)
                 return;
             
             FoodState foodState;
 
-            if (station.GetFoodIsBurnt())
+            if (heatStation.GetFoodIsBurnt())
                 foodState = FoodState.Burnt;
-            else if (station.GetFoodIsReady())
+            else if (heatStation.GetFoodIsReady())
                 foodState = FoodState.Ready;
-            else if (station.GetCurrentRecipe() != null)
+            else if (heatStation.GetCurrentRecipe() != null)
                 foodState = FoodState.Cooking;
             else
                 foodState = FoodState.Raw;

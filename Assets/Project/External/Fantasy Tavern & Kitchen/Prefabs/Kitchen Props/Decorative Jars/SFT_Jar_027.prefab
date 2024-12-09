@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 916220306471837556}
   - component: {fileID: 3122092723118549950}
   - component: {fileID: 6685097317111760036}
-  - component: {fileID: 7706884416836477584}
+  - component: {fileID: 3743980747624822583}
   m_Layer: 0
   m_Name: SFT_Jar_027
   m_TagString: Untagged
@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.120356135, y: 0.13881798, z: 0.12219831}
   m_Center: {x: 0, y: 0.06940899, z: 0}
---- !u!54 &7706884416836477584
+--- !u!54 &3743980747624822583
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3482156324999891563}
   serializedVersion: 4
-  m_Mass: 2
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

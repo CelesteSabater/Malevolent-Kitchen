@@ -4,14 +4,15 @@ namespace Project.BehaviourTree.Runtime
 {
     public class StationIsOn : ConditionalNode
     {
-        
-
         protected override void OnStart() { }
 
         protected override bool Question()
         {
-            CookingStation station = BlackboardFunctions.GetCookingStation(_blackboard);
-            return station.GetStationIsOn();
+            HeatStation cookingStation = BlackboardFunctions.GetCookingStation(_blackboard) as HeatStation;
+            if (cookingStation == null)
+                return false; 
+
+            return cookingStation.GetStationIsOn();
         }
     }
 }
