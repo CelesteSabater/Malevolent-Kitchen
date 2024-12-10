@@ -14,9 +14,16 @@ namespace Project.BehaviourTree.Runtime
             bool b = true;
             
             CookingStation station = BlackboardFunctions.GetCookingStation(_blackboard);
-            RecipeNode recipe = station.GetCurrentRecipe();
-            if(recipe == null)
-                b = false;
+            if (station != null)
+            {
+                RecipeNode recipe = station.GetCurrentRecipe();
+                if(recipe == null)
+                    b = false;
+            }
+            else
+            {
+                 b = CookingManager.Instance.AssignedRecipe();
+            }
 
             return b;
         }

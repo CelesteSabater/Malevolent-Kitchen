@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Runtime.Systems.Audio
@@ -14,7 +13,8 @@ namespace Project.Runtime.Systems.Audio
         RecipeStep,
         NewRecipe,
         Annoy,
-        ExtraCuts
+        ExtraCuts,
+        GameOver
     }
 
     [Serializable]
@@ -44,6 +44,7 @@ namespace Project.Runtime.Systems.Audio
             GameEvents.current.onNewRecipe += OnNewRecipe;
             GameEvents.current.onAnnoy += OnAnnoy;
             GameEvents.current.onExtraCuts += OnExtraCuts;
+            GameEvents.current.onGameOver += OnGameOver;
         }
 
         private void OnDestroy() 
@@ -55,6 +56,7 @@ namespace Project.Runtime.Systems.Audio
             GameEvents.current.onNewRecipe -= OnNewRecipe;
             GameEvents.current.onAnnoy -= OnAnnoy;
             GameEvents.current.onExtraCuts -= OnExtraCuts;
+            GameEvents.current.onGameOver -= OnGameOver;
         }
         
         void Update()
@@ -93,5 +95,6 @@ namespace Project.Runtime.Systems.Audio
                 _sentenceQueue.Enqueue(RandomSentence(NPCSentenceType.Annoy));
         }
         private void OnExtraCuts() => _sentenceQueue.Enqueue(RandomSentence(NPCSentenceType.ExtraCuts));
+        private void OnGameOver() => _sentenceQueue.Enqueue(RandomSentence(NPCSentenceType.GameOver));
     }
 }

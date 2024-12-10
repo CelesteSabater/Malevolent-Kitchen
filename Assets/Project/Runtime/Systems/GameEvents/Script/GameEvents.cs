@@ -19,6 +19,13 @@ public class GameEvents : MonoBehaviour
             onStrike();
     }
 
+    public event Action onGameOver;
+    public void GameOver()
+    {   
+        if(onGameOver != null)
+            onGameOver();
+    }
+
     public event Action onCompleteFood;
     public void CompleteFood()
     {

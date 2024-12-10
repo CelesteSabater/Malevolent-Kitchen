@@ -232,6 +232,14 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: 2d719cb47be7eff4da23970b852c4b3b, type: 3}
     _loop: 0
     _volume: 0.234
+  - _name: Flip
+    _clip: {fileID: 8300000, guid: a3923b803848ce94ca4df921d448d638, type: 3}
+    _loop: 0
+    _volume: 0.234
+  - _name: Death
+    _clip: {fileID: 8300000, guid: d5f2683b0b27bf347904402df2fe5b0e, type: 3}
+    _loop: 0
+    _volume: 0.234
   _sentences: []
   _musicSource: {fileID: 1458725382065195354}
   _sfxSource: {fileID: 7961552362422135988}

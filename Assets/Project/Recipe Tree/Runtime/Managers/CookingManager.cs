@@ -1,9 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Project.RecipeTree.Runtime;
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public enum Difficulty
 {
@@ -27,10 +27,13 @@ public class CookingManager : Singleton<CookingManager>
     private int _currentStrikes = 0;
     private RecipeTree _currentRequest;
     private RecipeTree _lastRequest;
+    private bool _requestCompleted;
+
+    public bool GetRequestCompleted() => _requestCompleted;
+    public bool AssignedRecipe() => _currentRequest != null;
 
     void Start()
     {
-        InitializeRandomRequest();
         GameEvents.current.onStrike += OnStrike;
         GameEvents.current.onCompleteFood += OnCompleteFood;
     }
@@ -51,7 +54,6 @@ public class CookingManager : Singleton<CookingManager>
             tryRequest = GetRandomRequest();
         } while (_lastRequest == tryRequest);
 
-        _lastRequest = _currentRequest;
         _currentRequest = tryRequest;
         
         GameEvents.current.NewRecipe(_currentRequest.GetRecipeName());
@@ -143,8 +145,34 @@ public class CookingManager : Singleton<CookingManager>
         return (1 * (int)_difficulty) / (1 + _completedRecipes * 0.1f);
     }
 
-    private void OnStrike() => _currentStrikes++;
-    private void OnCompleteFood() => _completedRecipes++;
+    private void OnStrike() =>_currentStrikes++;
+    private void OnCompleteFood()
+    {
+        _completedRecipes++;
+        _requestCompleted = true;
+    }
 
-    public bool GameIsLost() => _currentStrikes < _maxStrikes;
+    public void RestartData()
+    {
+        _lastRequest = _currentRequest;
+        _currentRequest = null;
+        _requestCompleted = false;
+    }
+
+    public bool GetGameIsLost() => _currentStrikes < _maxStrikes;
+    public void GameOver() 
+    {
+        GameEvents.current.GameOver();
+        FadeScene(0.3f, 2f, "Menu", "Death");
+    }
+
+    public IEnumerator FadeScene(float timeToFadeIn, float timeToChangeScene, string scene, string sfx)
+    {
+        yield return StartCoroutine(UIManager.Instance.Fade(1f, timeToFadeIn)); 
+
+        AudioSystem.Instance.PlaySFX(sfx);
+
+        yield return new WaitForSeconds(timeToChangeScene + timeToFadeIn);
+        SceneManager.LoadScene(scene);
+    }
 }

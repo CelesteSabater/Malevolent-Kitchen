@@ -111,7 +111,7 @@ public class CookingStation : MonoBehaviour
 
         RecipeRoot root = _currentRecipe as RecipeRoot;
         if (root != null)
-            AudioSystem.Instance.PlayMusicWithDelay(FoodSpawnManager.Instance.GetSummonDelay(),"WeDidIt");  
+            AudioSystem.Instance.PlayMusicWithDelay(FoodSpawnManager.Instance.GetSummonDelay(),"WeDidIt");
 
         bool FOOD_IS_NOT_BURNT = false;
         FoodSpawnManager.Instance.InstanceFood(_currentRecipe.GetFoodData(), GetFoodSpawnPos(), FOOD_IS_NOT_BURNT);
