@@ -1,5 +1,5 @@
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 
 namespace Project.RecipeTree.Runtime
 {
@@ -24,9 +24,11 @@ namespace Project.RecipeTree.Runtime
 
         public void SetPosition(Vector2 position)
         {
+            #if UNITY_EDITOR
             Undo.RecordObject(this, "Behaviour Tree (Set Position)");
             _position = position;
             EditorUtility.SetDirty(this);
+            #endif
         }
         public Vector2 GetPosition() => _position;
 

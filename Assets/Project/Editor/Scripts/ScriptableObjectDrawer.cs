@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-
+#if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(ScriptableObject), true)]
 public class ScriptableObjectDrawer : PropertyDrawer
 {
@@ -45,3 +45,4 @@ public class ScriptableObjectDrawer : PropertyDrawer
         }
     }
 }
+#endif

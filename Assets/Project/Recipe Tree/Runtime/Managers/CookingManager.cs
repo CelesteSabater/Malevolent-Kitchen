@@ -159,7 +159,7 @@ public class CookingManager : Singleton<CookingManager>
         _requestCompleted = false;
     }
 
-    public bool GetGameIsLost() => _currentStrikes < _maxStrikes;
+    public bool GetGameIsLost() => _currentStrikes >= _maxStrikes;
     public void GameOver() 
     {
         GameEvents.current.GameOver();

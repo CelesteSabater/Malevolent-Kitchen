@@ -12,7 +12,7 @@ public class CookingStation : MonoBehaviour
     [SerializeField] private List<RecipeNode> _stationRecipes = new List<RecipeNode>();  
     [SerializeField] private Dictionary<string, GameObject> _ingredientsOnArea = new Dictionary<string, GameObject>();
 
-    private string _stationGuid;
+    [SerializeField] private string _stationGuid = System.Guid.NewGuid().ToString();
 
     #region Getters and Setters
     public RecipeNode GetCurrentRecipe() => _currentRecipe;
@@ -22,7 +22,6 @@ public class CookingStation : MonoBehaviour
 
     protected virtual void Start()
     {
-        _stationGuid = GUID.Generate().ToString();
         _stationRecipes = CookingManager.Instance.GetRecipes(this);
         RestartData();
         GameEvents.current.onRecipeStep += OnRecipeStep;

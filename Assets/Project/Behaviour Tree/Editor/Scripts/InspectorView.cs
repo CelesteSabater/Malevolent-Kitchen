@@ -1,5 +1,5 @@
 using UnityEngine.UIElements;
-
+#if UNITY_EDITOR
 namespace Project.BehaviourTree.Editor
 {
     public class InspectorView : VisualElement
@@ -24,3 +24,4 @@ namespace Project.BehaviourTree.Editor
         }
     }
 }
+#endif

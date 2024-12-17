@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System;
 
 namespace Project.RecipeTree.Runtime
@@ -35,9 +37,9 @@ namespace Project.RecipeTree.Runtime
             }
 
             RecipeNode node = ScriptableObject.CreateInstance(type) as RecipeNode;
-
+            #if UNITY_EDITOR
             node.name = type.Name;
-            node.SetGUID(GUID.Generate().ToString());
+            node.SetGUID(System.Guid.NewGuid().ToString());
             node._position = position;
 
             Undo.RecordObject(node, "Recipe Tree (CreateNode)");
@@ -47,6 +49,7 @@ namespace Project.RecipeTree.Runtime
                 AssetDatabase.AddObjectToAsset(node, this);
             Undo.RegisterCreatedObjectUndo(node, "Recipe Tree (CreateNode)");
             AssetDatabase.SaveAssets();
+            #endif
             return node;
         }
 
@@ -56,16 +59,18 @@ namespace Project.RecipeTree.Runtime
             {
                 throw new InvalidOperationException("Root Node cannot be deleted.");
             }
-
+            #if UNITY_EDITOR
             Undo.RecordObject(this, "Recipe Tree (DeleteNode)");
             _nodes.Remove(node);
 
             Undo.DestroyObjectImmediate(node);
             AssetDatabase.SaveAssets();
+            #endif
         }
 
         public void AddChild(RecipeNode parent, RecipeNode child)
         {
+            #if UNITY_EDITOR
             RecipeRoot rootNode = parent as RecipeRoot;
             if (rootNode != null)
             {
@@ -113,10 +118,12 @@ namespace Project.RecipeTree.Runtime
                 mixing._children.Add(child);
                 EditorUtility.SetDirty(mixing);
             }
+            #endif
         }
 
         public void RemoveChild(RecipeNode parent, RecipeNode child)
         {
+            #if UNITY_EDITOR
             RecipeRoot rootNode = parent as RecipeRoot;
             if (rootNode != null)
             {
@@ -164,6 +171,7 @@ namespace Project.RecipeTree.Runtime
                 mixing._children.Remove(child);
                 EditorUtility.SetDirty(mixing);
             }
+            #endif
         }
 
         public static List<RecipeNode> GetChildren(RecipeNode parent)

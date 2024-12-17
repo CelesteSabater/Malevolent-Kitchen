@@ -14,11 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedTabIndex: 1
   historyItemsMax: 20
-  history:
-  - context: 1
-    title: 
-    unityObject: {fileID: 11400000, guid: 23413607b56773540ab4ead7ab8ea88e, type: 2}
-    objectGuid: GlobalObjectId_V1-3-23413607b56773540ab4ead7ab8ea88e-11400000-0
+  history: []
   favorites:
   - context: 2
     title: Escenas
@@ -32,3 +28,7 @@ MonoBehaviour:
     title: 
     unityObject: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
     objectGuid: GlobalObjectId_V1-1-9fc0d4010bbf28b4594072e72b8655ab-102900000-0
+  - context: 1
+    title: 
+    unityObject: {fileID: 102900000, guid: 319dafa5c80f29f428dc1e0d03f04177, type: 3}
+    objectGuid: GlobalObjectId_V1-1-319dafa5c80f29f428dc1e0d03f04177-102900000-0

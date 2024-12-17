@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 using Project.RecipeTree.Runtime;
@@ -131,3 +132,4 @@ namespace Project.RecipeTree.Editor
         }
     }
 }
+#endif

@@ -40,7 +40,7 @@ public class FurnaceStation : HeatStation
         RestartData();   
     }
 
-    private void OnOperateDoor(string stationGuid)
+    public void OnOperateDoor(string stationGuid)
     {
         if (stationGuid != GetStationGuid())
             return;

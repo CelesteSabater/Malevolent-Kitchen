@@ -1,5 +1,5 @@
 using UnityEngine.UIElements;
-
+#if UNITY_EDITOR
 namespace Project.RecipeTree.Editor
 {
     public class RecipeInspectorView : VisualElement
@@ -24,3 +24,4 @@ namespace Project.RecipeTree.Editor
         }
     }
 }
+#endif

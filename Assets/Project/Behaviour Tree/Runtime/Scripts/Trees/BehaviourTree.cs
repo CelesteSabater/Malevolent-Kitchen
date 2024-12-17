@@ -32,9 +32,9 @@ namespace Project.BehaviourTree.Runtime
             }
 
             Node node = ScriptableObject.CreateInstance(type) as Node;
-
+            #if UNITY_EDITOR
             node.name = type.Name;
-            node.SetGUID(GUID.Generate().ToString());
+            node.SetGUID(System.Guid.NewGuid().ToString());
             node._position = position;
 
             Undo.RecordObject(node, "Behaviour Tree (CreateNode)");
@@ -44,6 +44,7 @@ namespace Project.BehaviourTree.Runtime
                 AssetDatabase.AddObjectToAsset(node, this);
             Undo.RegisterCreatedObjectUndo(node, "Behaviour Tree (CreateNode)");
             AssetDatabase.SaveAssets();
+            #endif
             return node;
         }
 
@@ -54,15 +55,18 @@ namespace Project.BehaviourTree.Runtime
                 throw new InvalidOperationException("Root Node cannot be deleted.");
             }
 
+            #if UNITY_EDITOR
             Undo.RecordObject(this, "Behaviour Tree (DeleteNode)");
             _nodes.Remove(node);
 
             Undo.DestroyObjectImmediate(node);
             AssetDatabase.SaveAssets();
+            #endif
         }
 
         public void AddChild(Node parent, Node child)
         {
+            #if UNITY_EDITOR
             DecoratorNode decorator = parent as DecoratorNode;
             if (decorator != null)
             {
@@ -94,10 +98,12 @@ namespace Project.BehaviourTree.Runtime
                 composite._children.Add(child);
                 EditorUtility.SetDirty(composite);
             }
+            #endif
         }
 
         public void RemoveChild(Node parent, Node child)
         {
+            #if UNITY_EDITOR
             DecoratorNode decorator = parent as DecoratorNode;
             if (decorator != null)
             {
@@ -129,6 +135,7 @@ namespace Project.BehaviourTree.Runtime
                 composite._children.Remove(child);
                 EditorUtility.SetDirty(composite);
             }
+            #endif
         }
 
         public List<Node> GetChildren(Node parent)
@@ -140,7 +147,6 @@ namespace Project.BehaviourTree.Runtime
 
             ConditionalNode conditional = parent as ConditionalNode;
             if (conditional != null) result.Add(conditional._child);
-
             Root rootNode = parent as Root;
             if (rootNode != null) result.Add(rootNode._child);
 

@@ -45,7 +45,7 @@ public class CuttingStation : CookingStation
         if (ExtraCuts())
             GameEvents.current.ExtraCuts();
 
-        AudioSystem.Instance.PlaySFX("Cut", GetFoodSpawnPos());
+        AudioSystem.Instance.PlaySFX("Chop", GetFoodSpawnPos());
     }
 
     public void SpawnCuttable()

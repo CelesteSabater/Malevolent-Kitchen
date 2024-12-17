@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace Project.BehaviourTree.Runtime
@@ -50,9 +52,11 @@ namespace Project.BehaviourTree.Runtime
 
         public void SetPosition(Vector2 position)
         {
+            #if UNITY_EDITOR
             Undo.RecordObject(this, "Behaviour Tree (Set Position)");
             _position = position;
             EditorUtility.SetDirty(this);
+            #endif
         }
         public Vector2 GetPosition() => _position;
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
 
 [CustomEditor(typeof(RampGeneratorTDE))]
@@ -20,3 +21,4 @@ public class CustomRampGeneratorEditor : Editor
         }               
     }
 }
+#endif

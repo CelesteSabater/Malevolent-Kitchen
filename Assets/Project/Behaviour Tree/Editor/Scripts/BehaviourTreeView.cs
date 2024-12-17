@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine.UIElements;
+#if UNITY_EDITOR
 using UnityEditor.Experimental.GraphView;
 using UnityEditor;
 using System;
@@ -178,3 +179,4 @@ namespace Project.BehaviourTree.Editor
         }
     }
 }
+#endif

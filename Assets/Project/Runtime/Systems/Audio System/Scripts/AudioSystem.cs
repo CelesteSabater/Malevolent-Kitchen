@@ -60,6 +60,7 @@ public class AudioSystem : Singleton<AudioSystem>
             return;
 
         _sfxSource.volume = sfx._volume * _sfxVolume;
+        _sfxSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
         _sfxSource.PlayOneShot(sfx._clip);
     }
 
@@ -111,6 +112,7 @@ public class AudioSystem : Singleton<AudioSystem>
         AudioSource aSource = tempGO.AddComponent<AudioSource>();
 
         aSource.clip = clip;
+        aSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
         aSource.volume = volume;    
         aSource.Play();
         Destroy(tempGO, clip.length);

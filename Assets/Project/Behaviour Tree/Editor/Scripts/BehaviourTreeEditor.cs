@@ -1,10 +1,12 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+#if UNITY_EDITOR
 using UnityEditor.Callbacks;
+using UnityEditor;
+#endif
 using Project.BehaviourTree.Runtime;
 using System;
-
+#if UNITY_EDITOR
 namespace Project.BehaviourTree.Editor
 {
     public class BehaviourTreeEditor : EditorWindow
@@ -136,3 +138,4 @@ namespace Project.BehaviourTree.Editor
         }
     }
 }
+#endif
